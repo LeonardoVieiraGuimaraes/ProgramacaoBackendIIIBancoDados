@@ -1,11 +1,12 @@
+package atributosIndicadoresVariaveisJava;
 
 // Importa a classe ArrayList do pacote java.util
 import java.util.ArrayList;
 
-// Importa a classe Navio do pacote atributosIndicadoresVariaveisJava
-import atributosIndicadoresVariaveisJava.Navio;
+// // Importa a classe Navio do pacote atributosIndicadoresVariaveisJava
+// import atributosIndicadoresVariaveisJava.Navio;
 
-public class ExemploArrayListNavio {
+public class ArrayListNavio {
     public static void main(String[] args) {
         // Cria um ArrayList de Navios
         ArrayList<Navio> listaNavios = new ArrayList<Navio>();
