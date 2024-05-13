@@ -54,12 +54,12 @@
 
 ## Modificadores de Acesso
 
-| Modificador | Classe | Pacote | Subclasse | Mundo |
-| --- | --- | --- | --- | --- |
-| public | Sim | Sim | Sim | Sim |
-| protected | Sim | Sim | Sim | Não |
-| nenhum (pacote) | Sim | Sim | Não | Não |
-| private | Sim | Não | Não | Não |
+| Modificador | Definição |
+| --- | --- |
+| public | O membro é acessível de qualquer outra classe. |
+| protected | O membro é acessível apenas por classes do mesmo pacote ou por subclasses da classe. |
+| nenhum (pacote) | O membro é acessível apenas dentro de seu próprio pacote. |
+| private | O membro é acessível apenas de dentro da própria classe. |
 
 ## Modificadores de Classe, Método e Variável em Java
 
@@ -79,6 +79,7 @@
 ## Tipos de Dados Primitivos em Java
 
 | Tipo de Dado | Definição | Exemplo em Java |
+| --- | --- | --- |
 | Literal | Recebe letras, números e símbolos | char |
 | Inteiro | Recebe números inteiros positivos ou negativos | int |
 | Real | Recebe números reais, isto é, com casas decimais, positivos ou negativos | float, double |
