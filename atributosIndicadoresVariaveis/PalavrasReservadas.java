@@ -1,4 +1,4 @@
-package atributosIndicadoresVariaveisJava;
+package atributosIndicadoresVariaveis;
 
 // Interface para definir um método que todas as classes que a implementam devem ter
 interface InterfaceExemplo {
@@ -39,7 +39,7 @@ class ClasseConcreta extends ClasseAbstrata {
 }
 
 // Método main para executar o exemplo
-public class Main {
+public class PalavrasReservadas {
     static {
         System.loadLibrary("bibliotecaNativa"); // Carrega a biblioteca nativa
     }

@@ -1,4 +1,4 @@
-package conceitosBasicos;
+package introducaoConceitosBasicos;
 
 public class Navio {
     private String cor;
