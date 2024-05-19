@@ -1,4 +1,4 @@
-package AtributosIndicadoresVariaveisJava;
+package atributosIndicadoresVariaveisJava;
 
 public class Navio {
     // Atributos privados
