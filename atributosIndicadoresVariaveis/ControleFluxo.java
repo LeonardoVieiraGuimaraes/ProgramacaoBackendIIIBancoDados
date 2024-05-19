@@ -1,4 +1,4 @@
-package atributosIndicadoresVariaveis;
+package AtributosIndicadoresVariaveis;
 
 class ControleFluxo {
     public static void main(String[] args) {

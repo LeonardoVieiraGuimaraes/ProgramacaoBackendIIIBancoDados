@@ -1,4 +1,4 @@
-package introducaoConceitosBasicos;
+package IntroducaoConceitosBasicos;
 
 /**
  * A classe HelloWorld contém o método main - o ponto de entrada do programa.
