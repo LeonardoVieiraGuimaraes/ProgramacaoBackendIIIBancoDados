@@ -1,4 +1,4 @@
-package atributosIndicadoresVariaveisJava;
+package atributosIndicadoresVariaveis;
 
 public class VariaveisTiposDados {
     public static void main(String[] args) {
