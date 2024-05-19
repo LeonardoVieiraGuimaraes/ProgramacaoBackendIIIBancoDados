@@ -1,4 +1,4 @@
-package orientacaoObjetosJava;
+package OrientacaoObjetosJava;
 
 public class MainMeioTransporte {
     public static void main(String[] args) {

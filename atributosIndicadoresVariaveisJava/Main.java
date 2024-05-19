@@ -1,4 +1,4 @@
-package atributosIndicadoresVariaveisJava;
+package AtributosIndicadoresVariaveisJava;
 
 // Interface para definir um método que todas as classes que a implementam devem ter
 interface InterfaceExemplo {

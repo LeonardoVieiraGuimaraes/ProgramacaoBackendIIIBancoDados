@@ -1,4 +1,4 @@
-package atributosIndicadoresVariaveisJava;
+package AtributosIndicadoresVariaveisJava;
 
 // Importa a classe ArrayList do pacote java.util
 import java.util.ArrayList;

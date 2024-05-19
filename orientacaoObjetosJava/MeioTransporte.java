@@ -1,4 +1,4 @@
-package orientacaoObjetosJava;
+package OrientacaoObjetosJava;
 
 // Classe abstrata MeioTransporte
 public abstract class MeioTransporte {

@@ -1,4 +1,4 @@
-package orientacaoObjetosJava;
+package OrientacaoObjetosJava;
 
 // Classe Navio que herda de MeioTransporte
 public class Navio extends MeioTransporte {

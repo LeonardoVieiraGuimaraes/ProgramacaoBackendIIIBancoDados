@@ -1,4 +1,4 @@
-package orientacaoObjetosJava;
+package OrientacaoObjetosJava;
 
 // Classe Trem que herda de MeioTransporte
 public class Trem extends MeioTransporte {

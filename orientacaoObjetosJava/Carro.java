@@ -1,4 +1,4 @@
-package orientacaoObjetosJava;
+package OrientacaoObjetosJava;
 
 // Classe Carro que herda de MeioTransporte
 public class Carro extends MeioTransporte {
