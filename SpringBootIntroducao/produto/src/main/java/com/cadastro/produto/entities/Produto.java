@@ -24,7 +24,7 @@ public class Produto {
     @NotBlank(message = "Nome é obrigatório")
     private String nome;
 
-    @Size(min = 1, max = 100, message = "Descrição deve ter entre 1 e 100 caracteres")
+    @Size(min = 1, max = 10, message = "Descrição deve ter entre 1 e 100 caracteres")
     private String descricao;
     
     @NotNull(message = "Preço é obrigatório")
