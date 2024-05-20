@@ -2,7 +2,6 @@
 package com.cadastro.produto.entities;
 
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -21,7 +20,7 @@ public class Produto {
     private Integer codigo; // Este campo armazena o código do produto.
 
     // Os demais campos armazenam informações sobre o produto: nome, descrição, preço e quantidade.
-    @NotBlank(message = "Nome é obrigatório")
+    @NotNull(message = "Nome é obrigatório")
     private String nome;
 
     @Size(min = 1, max = 10, message = "Descrição deve ter entre 1 e 100 caracteres")
