@@ -1,8 +1,11 @@
 // Define o pacote no qual a classe Produto está localizada
 package com.cadastro.produto.entities;
 
-// Importa a anotação Entity do pacote jakarta.persistence. 
-// A anotação Entity é usada para indicar que a classe é uma entidade, ou seja, uma tabela no banco de dados.
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,9 +21,18 @@ public class Produto {
     private Integer codigo; // Este campo armazena o código do produto.
 
     // Os demais campos armazenam informações sobre o produto: nome, descrição, preço e quantidade.
+    @NotBlank(message = "Nome é obrigatório")
     private String nome;
+
+    @Size(min = 1, max = 100, message = "Descrição deve ter entre 1 e 100 caracteres")
     private String descricao;
+    
+    @NotNull(message = "Preço é obrigatório")
+    @Min(value = 0, message = "Preço deve ser maior ou igual a zero")
     private Double preco;
+
+    @NotNull(message = "Quantidade é obrigatória")
+    @Min(value = 0, message = "Quantidade deve ser maior ou igual a zero")
     private Integer quantidade;
 
     // Os métodos getCodigo, getNome, getDescricao, getPreco e getQuantidade são getters que retornam o valor dos respectivos campos.

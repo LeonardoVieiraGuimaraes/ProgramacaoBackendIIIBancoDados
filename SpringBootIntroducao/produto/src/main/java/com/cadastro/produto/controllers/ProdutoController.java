@@ -4,6 +4,7 @@ package com.cadastro.produto.controllers;
 // Importa as classes e anotações necessárias do Spring Framework
 import java.util.List;
 
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,11 +32,12 @@ public class ProdutoController {
         return produtoRepository.findAll();
     }
 
-    // Método para criar um novo produto
-    @PostMapping
-    public Produto criarProduto(@RequestBody Produto produto) {
-        return produtoRepository.save(produto);
-    }
+// Método para criar um novo produto
+@PostMapping
+public Produto criarProduto(@Valid @RequestBody Produto produto) {
+    return produtoRepository.save(produto);
+}
+
 
     // Método para buscar um produto pelo ID
     @GetMapping("/{id}")
@@ -44,19 +46,19 @@ public class ProdutoController {
                 .orElseThrow(() -> new IllegalArgumentException("Produto não encontrado"));
     }
 
-    // Método para atualizar um produto existente
-    @PutMapping("/{id}")
-    public Produto atualizarProduto(@PathVariable Integer id, @RequestBody Produto produtoAtualizado) {
-        return produtoRepository.findById(id)
-                .map(produto -> {
-                    produto.setNome(produtoAtualizado.getNome());
-                    produto.setDescricao(produtoAtualizado.getDescricao());
-                    produto.setPreco(produtoAtualizado.getPreco());
-                    produto.setQuantidade(produtoAtualizado.getQuantidade());
-                    return produtoRepository.save(produto);
-                })
-                .orElseThrow(() -> new IllegalArgumentException("Produto não encontrado"));
-    }
+// Método para atualizar um produto existente
+@PutMapping("/{id}")
+public Produto atualizarProduto(@PathVariable Integer id, @Valid @RequestBody Produto produtoAtualizado) {
+    return produtoRepository.findById(id)
+            .map(produto -> {
+                produto.setNome(produtoAtualizado.getNome());
+                produto.setDescricao(produtoAtualizado.getDescricao());
+                produto.setPreco(produtoAtualizado.getPreco());
+                produto.setQuantidade(produtoAtualizado.getQuantidade());
+                return produtoRepository.save(produto);
+            })
+            .orElseThrow(() -> new IllegalArgumentException("Produto não encontrado"));
+}
 
     // Método para deletar um produto pelo ID
     @DeleteMapping("/{id}")
