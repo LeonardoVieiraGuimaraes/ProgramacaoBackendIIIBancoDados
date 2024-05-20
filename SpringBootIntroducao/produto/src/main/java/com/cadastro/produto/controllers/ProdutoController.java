@@ -4,7 +4,6 @@ package com.cadastro.produto.controllers;
 // Importa as classes e anotações necessárias do Spring Framework
 import java.util.List;
 
-import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cadastro.produto.entities.Produto;
 import com.cadastro.produto.repositories.ProdutoRepository;
+
+import jakarta.validation.Valid;
 // Anotação para indicar que esta classe é um controlador REST
 @RestController
 // Anotação para mapear as requisições para este controlador para o caminho /api/produtos
@@ -32,11 +33,11 @@ public class ProdutoController {
         return produtoRepository.findAll();
     }
 
-// Método para criar um novo produto
-@PostMapping
-public Produto criarProduto(@Valid @RequestBody Produto produto) {
-    return produtoRepository.save(produto);
-}
+    // Método para criar um novo produto
+    @PostMapping
+    public Produto criarProduto(@Valid @RequestBody Produto produto) {
+        return produtoRepository.save(produto);
+    }
 
 
     // Método para buscar um produto pelo ID
