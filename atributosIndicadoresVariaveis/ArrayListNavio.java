@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class ArrayListNavio {
     public static void main(String[] args) {
         // Cria um ArrayList de Navios
-        ArrayList<Navio> listaNavios = new ArrayList<Navio>();
+        ArrayList<Navio> listaNavios = new ArrayList<>();
 
         // Cria o primeiro navio
         Navio navio1 = new Navio();

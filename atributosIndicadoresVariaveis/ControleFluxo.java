@@ -13,16 +13,11 @@ class ControleFluxo {
         // switch-case
         int diaDaSemana = 3;
         switch (diaDaSemana) {
-            case 1:
-                System.out.println("Domingo");
-                break;
-            case 2:
-                System.out.println("Segunda-feira");
-                break;
-            // ... e assim por diante até o sábado
-            default:
-                System.out.println("Dia inválido");
+            case 1 -> System.out.println("Domingo");
+            case 2 -> System.out.println("Segunda-feira");
+            default -> System.out.println("Dia inválido");
         }
+        // ... e assim por diante até o sábado
 
         // for loop
         for (int i = 0; i < 5; i++) {
