@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cadastro.produto.entities.Produto;
 import com.cadastro.produto.repositories.ProdutoRepository;
 
-import jakarta.validation.Valid;
 // Anotação para indicar que esta classe é um controlador REST
 @RestController
 // Anotação para mapear as requisições para este controlador para o caminho /api/produtos
@@ -35,7 +34,7 @@ public class ProdutoController {
 
     // Método para criar um novo produto
     @PostMapping
-    public Produto criarProduto(@Valid @RequestBody Produto produto) {
+    public Produto criarProduto(@RequestBody Produto produto) {
         return produtoRepository.save(produto);
     }
 
@@ -49,7 +48,7 @@ public class ProdutoController {
 
 // Método para atualizar um produto existente
 @PutMapping("/{id}")
-public Produto atualizarProduto(@PathVariable Integer id, @Valid @RequestBody Produto produtoAtualizado) {
+public Produto atualizarProduto(@PathVariable Integer id, @RequestBody Produto produtoAtualizado) {
     return produtoRepository.findById(id)
             .map(produto -> {
                 produto.setNome(produtoAtualizado.getNome());
