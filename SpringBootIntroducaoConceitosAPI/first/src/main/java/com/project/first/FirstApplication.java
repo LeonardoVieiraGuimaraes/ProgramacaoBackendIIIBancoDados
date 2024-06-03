@@ -1,4 +1,4 @@
-package SpringBootIntroducaoConceitosAPI.first.src.main.java.com.project.first;
+package SpringBootIntroducao.first.src.main.java.com.project.first;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
