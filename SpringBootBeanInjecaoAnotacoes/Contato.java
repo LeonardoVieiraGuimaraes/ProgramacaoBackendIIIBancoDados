@@ -13,6 +13,7 @@ public class  Contato {
         this.cpf = cpf;
     }
 
+    @Apresentar
     public String getNome() {
         return nome;
     }
@@ -20,7 +21,7 @@ public class  Contato {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
+    @Apresentar
     public String getEmail() {
         return email;
     }
